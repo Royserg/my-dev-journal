@@ -8,5 +8,21 @@
   <body>
     <h1>Home page for testing</h1>
     <div id="main"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+    <script>
+      // Instantiate showdown converter
+      const converter = new showdown.Converter()
+
+      fetch('http://localhost:3000/api/first')
+        .then(response => response.json())
+        .then(data => {
+          // Use front matter data, for example set title of the page
+          document.title = data.attributes.title
+          // Convert markdown to html and insert into div#main
+          const html = converter.makeHtml(data.body)
+          document.querySelector('#main').innerHTML = html
+        })
+    </script>
   </body>
 </html>

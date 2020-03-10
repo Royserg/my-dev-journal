@@ -2,8 +2,6 @@ const express = require('express')
 const app = express()
 
 const fs = require('fs')
-const showdown = require('showdown')
-const converter = new showdown.Converter()
 
 const fm = require('front-matter')
 const markdownRoot = `${__dirname}/src/markdown/`
@@ -14,22 +12,18 @@ app.use(express.json())
 
 // Routes
 app.get('/', (req, res) => {
+  res.sendFile('index.html', { root: __dirname })
+})
+
+app.get('/api/first', (req, res) => {
   const path = `${__dirname}/src/markdown/first.md`
-  // res.sendFile('index.html', { root: __dirname })
-  // res.sendFile('src/markdown/first.md', { root: __dirname })
+
   fs.readFile(path, 'utf8', (err, data) => {
     if (err) throw err
 
     const content = fm(data)
-    const html = converter.makeHtml(content.body)
-    // return res.json({
-    //   title: content.attributes.title,
-    //   date: content.attributes.date,
-    //   content: html
-    // })
-    return res.send(html)
+    return res.json(content)
   })
-  // res.send()
 })
 
 app.get('/create', (req, res) => {
