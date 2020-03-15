@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import usePosts from 'hooks/usePosts'
 
 import Page from 'components/Page/Page'
