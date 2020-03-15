@@ -6,6 +6,7 @@ import {
   Redirect
 } from 'react-router-dom'
 import { makeStyles } from '@material-ui/core/styles'
+import CssBaseline from '@material-ui/core/CssBaseline'
 /* Components */
 import Sidebar from './components/Sidebar/Sidebar'
 /* Routes file */
@@ -13,7 +14,7 @@ import routes from './routes'
 /* Styles */
 import styles from './appStyles'
 
-const useStyles = makeStyles(styles)  
+const useStyles = makeStyles(styles)
 
 function App () {
   // styles
@@ -31,6 +32,7 @@ function App () {
 
   return (
     <Router>
+      <CssBaseline />
       <div className={classes.wrapper}>
         <Sidebar brandText="MyDevJournal" routes={routes} />
         <div className={classes.mainContent}>

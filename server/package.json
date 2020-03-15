@@ -5,11 +5,12 @@
   "main": "app.js",
   "scripts": {
     "start": "cross-env PORT=80 node app",
-    "watch": "cross-env PORT=3000 nodemon app"
+    "watch": "cross-env PORT=3001 nodemon app"
   },
   "author": "Jakub",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "front-matter": "^3.1.0",
     "showdown": "^1.9.1"

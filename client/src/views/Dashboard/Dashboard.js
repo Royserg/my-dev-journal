@@ -1,10 +1,14 @@
 import React from 'react'
+import Page from 'components/Page/Page'
 
 const Dashboard = props => {
   return (
-    <div>
-      <h3>Dashboard Page</h3>
-    </div>
+    <Page pageTitle='Dashboard'>
+      <p>Some info about the application</p>
+      <ul>
+        <li>Implement adding a post</li>
+      </ul>
+    </Page>
   )
 }
 

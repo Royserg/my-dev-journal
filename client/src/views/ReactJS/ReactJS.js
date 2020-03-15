@@ -1,10 +1,16 @@
 import React from 'react'
+import usePosts from 'hooks/usePosts'
+
+import Page from 'components/Page/Page'
+import PostList from 'components/PostList/PostList'
 
 const ReactJS = props => {
+  const { posts } = usePosts('react')
+
   return (
-    <div>
-      <h3>React Page</h3>
-    </div>
+    <Page pageTitle='React'>
+      <PostList items={posts} />
+    </Page>
   )
 }
 

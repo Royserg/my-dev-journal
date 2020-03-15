@@ -27,7 +27,7 @@ const Sidebar = ({ brandText, routes }) => {
           [classes.itemLink]: true
         })
 
-          return ( route.path !== '/' &&
+          return ( route.inSidebar &&
             <NavLink key={key} to={route.path} className={classes.item}>
               <ListItem button className={listItemClass}>
                 <ListItemText disableTypography className={classes.itemText}>
