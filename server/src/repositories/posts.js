@@ -28,7 +28,7 @@ const getPosts = category => {
 
 const getPost = (category, filename) => {
   return new Promise((resolve, reject) => {
-    const path = `${MD_ROOT}${category}/${filename}`
+    const path = MD_ROOT + category + `/${filename}`
     fs.readFile(path, 'utf8', (error, data) => {
       if (error) {
         reject(error)
@@ -38,16 +38,6 @@ const getPost = (category, filename) => {
     })
   })
 }
-
-// app.get('/create', (req, res) => {
-//   const content =
-//     "## huehue, that's the heading\nmaybe a paragrapht\n\n### Something Else?\n\n ```javascript\nconst function = () => {\nreturn 'MyString'\n}\n```"
-
-//   fs.appendFile(`${markdownRoot}/addedFile.md`, content, err => {
-//     if (err) throw err
-//     return res.json({ message: 'file created' })
-//   })
-// })
 
 module.exports = {
   getPosts,

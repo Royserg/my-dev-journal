@@ -13,10 +13,18 @@ app.use(express.json())
 // Enable cors
 app.use(cors())
 
+// Serve static files
+app.use(express.static('build'))
+
 // Routes
 app.use(routes)
 
-const PORT = process.env.PORT || 3000
+// Default fallback route to react app
+app.get('*', (req, res) => {
+  res.sendFile('/build/index.html', { root: __dirname })
+})
+
+const PORT = process.env.PORT || 3001
 app.listen(PORT, error => {
   if (error) {
     console.log(`Error while running: ${error}`)

@@ -21,6 +21,7 @@ const Post = props => {
     const fetchPost = async () => {
       const response = await getPost(category, filename)
       const { data } = response
+      console.log(data)
       setPostData(data)
     }
     fetchPost()
