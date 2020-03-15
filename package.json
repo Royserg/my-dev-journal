@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "dev": "concurrently \"npm run watch-*\"",
+    "watch-client": "cd client && npm start",
+    "watch-server": "cd server && npm run watch"
+  },
+  "devDependencies": {
+    "concurrently": "^5.1.0"
+  },
+  "dependencies": {}
+}

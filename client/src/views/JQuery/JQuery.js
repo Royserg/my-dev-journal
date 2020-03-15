@@ -1,18 +1,17 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import usePosts from 'hooks/usePosts'
 
-const posts = [
-  { title: 'title1', content: 'content1'},
-  { title: 'title2', content: 'content2' },
-  { title: 'title3', content: 'content3' }
-]
+import Page from 'components/Page/Page'
+import PostList from 'components/PostList/PostList'
 
 const JQuery = props => {
 
+  const { posts } = usePosts('jquery')
 
   return (
-    <div>
-      <h3>jQuery page</h3>
-    </div>
+    <Page pageTitle='jQuery'>
+      <PostList items={posts} />
+    </Page>
   )
 }
 
