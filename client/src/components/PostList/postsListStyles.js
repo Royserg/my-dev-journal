@@ -7,7 +7,7 @@ import {
 
 const postListStyles = theme => ({
   container: {
-    width: '50%',
+    width: '40%',
   },
   list: {
     marginTop: '20px',

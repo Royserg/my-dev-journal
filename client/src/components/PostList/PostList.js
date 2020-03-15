@@ -1,11 +1,8 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { makeStyles } from '@material-ui/core/styles'
 
 import List from '@material-ui/core/List'
-import ListItem from '@material-ui/core/ListItem'
-import ListItemText from '@material-ui/core/ListItemText'
-
+import PostItem from 'components/PostItem/PostItem'
 import styles from './postsListStyles'
 
 const useStyles = makeStyles(styles)
@@ -14,24 +11,19 @@ const PostList = ({ items }) => {
   // styles
   const classes = useStyles()
 
-  /* TODO: Make post Item as a Card with top/right corner box for date */
   const posts = (
     <List className={classes.list}>
-      {items.map((item, key) => (
-          <Link key={key} to={item.path} className={classes.item}>
-            <ListItem button>
-              <ListItemText disableTypography className={classes.itemText}>
-                {item.title}
-              </ListItemText>
-            </ListItem>
-          </Link>
-        ))}
+      {items.map((item, index) => {
+        /* 1st element has index 0 (even), 3rd has index 2 ...
+           To keep logically reversed every second element,
+           odd indexes are reversed */
+        const isReversed = index % 2 === 0 ? false : true
+        return (
+          <PostItem key={index} item={item} reversed={isReversed} />
+        )
+      })}
     </List>
   )
-
-  // const postRoute = (
-  //   <Route path={'/:category/:item'} component={Post} />
-  // )
 
   return (
     <div className={classes.container}>
