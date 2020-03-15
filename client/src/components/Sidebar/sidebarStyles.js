@@ -7,7 +7,7 @@ import {
   whiteColor,
   blackColor,
   hexToRGBA
-} from '../../assets/jss/general'
+} from 'assets/jss/general'
 
 const sidebarStyles = theme => ({
   drawerPaper: {

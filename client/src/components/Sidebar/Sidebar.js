@@ -21,14 +21,16 @@ const Sidebar = ({ brandText, routes }) => {
 
   const links = (
     <List className={classes.list}>
-      {routes.map((route, key) => {
-        const listItemClass = classNames({
-          [classes.purple]: isActiveRoute(route.path),
-          [classes.itemLink]: true
-        })
+      {routes.map((route, index) => {
+        const listItemClass = classNames(
+          classes.itemLink, {
+            [classes.purple]: isActiveRoute(route.path)
+          }
+        )
 
-          return ( route.inSidebar &&
-            <NavLink key={key} to={route.path} className={classes.item}>
+        return (
+          route.inSidebar && (
+            <NavLink key={index} to={route.path} className={classes.item}>
               <ListItem button className={listItemClass}>
                 <ListItemText disableTypography className={classes.itemText}>
                   {route.name}
@@ -36,6 +38,7 @@ const Sidebar = ({ brandText, routes }) => {
               </ListItem>
             </NavLink>
           )
+        )
       })}
     </List>
   )

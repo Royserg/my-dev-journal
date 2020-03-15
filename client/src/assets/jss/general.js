@@ -31,7 +31,11 @@ const defaultFont = {
   lineHeight: '1.5em'
 }
 
-const primaryColor = ['#9c27b0', '#BE78E7', '#8e24aa', '#af2cc5']
+const primaryColor = [
+  '#9c27b0',
+  '#BE78E7',
+  '#8e24aa',
+  '#af2cc5']
 
 const blackColor = ['#000000', '#333333', '#555555']
 

@@ -1,4 +1,4 @@
-import { drawerWidth, transition, whiteColor, blackColor, boxShadow } from 'assets/jss/general'
+import { drawerWidth, transition, whiteColor, primaryColor, boxShadow } from 'assets/jss/general'
 
 const backButtonStyles = theme => ({
   button: {
@@ -8,7 +8,7 @@ const backButtonStyles = theme => ({
     ...boxShadow,
     ...transition,
     '&:hover': {
-      background: blackColor[0],
+      background: primaryColor[0],
       color: whiteColor
     }
   }

@@ -1,12 +1,21 @@
-import { boxShadow } from 'assets/jss/general'
+import { boxShadow, blackColor, whiteColor } from 'assets/jss/general'
 
 
 
 const postStyles = theme => ({
   markdown: {
-    color: '#222',
+    fontSize: '17px',
+    color: blackColor[1],
     fontFamily: 'Roboto, Helvetica, Arial, sans-serif',
-    width: '50%',
+    width: '55%',
+    '& code': {
+      padding: '.1em',
+      background: blackColor[1],
+      color: whiteColor,
+      fontSize: '1em',
+      whiteSpace: 'pre',
+      borderRadius: '3px',
+    },
     '& p, h1, h2': {
       display: 'block',
       marginBlockStart: '1em',
@@ -35,7 +44,7 @@ const postStyles = theme => ({
     },
     '& pre': {
       fontFamily: 'source-code-pro, monospace, Courier New',
-      width: '90%',
+      width: '95%',
       marginLeft: '0.5em',
       marginBottom: '1em',
       borderRadius: '5px',
@@ -43,16 +52,17 @@ const postStyles = theme => ({
       overflow: 'auto',
       whiteSpace: 'pre',
       lineHeight: '20px',
-      ...boxShadow
+      ...boxShadow,
+      '& code': {
+        display: 'block',
+        overflowX: 'auto',
+        padding: '1em',
+        background: '#fefefe',
+        color: blackColor[1],
+        fontSize: '1em',
+        whiteSpace: 'pre'
+      }
     },
-    '& code': {
-      display: 'block',
-      overflowX: 'auto',
-      padding: '1em',
-      background: '#fefefe',
-      fontSize: '1em',
-      whiteSpace: 'pre'
-    }
   }
 })
 

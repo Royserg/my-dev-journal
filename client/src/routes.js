@@ -28,21 +28,15 @@ const routes = [
     inSidebar: true
   },
   {
-    path: '/jquery',
-    name: 'jQuery',
-    component: JQuery,
-    inSidebar: true
-  },
-  {
     path: '/react',
     name: 'React',
     component: ReactJS,
     inSidebar: true
   },
   {
-    path: '/snippets',
-    name: 'Code Snippets',
-    component: Snippets,
+    path: '/jquery',
+    name: 'jQuery',
+    component: JQuery,
     inSidebar: true
   },
   {
@@ -55,6 +49,12 @@ const routes = [
     path: '/tools',
     name: 'Tools',
     component: Tools,
+    inSidebar: true
+  },
+  {
+    path: '/snippets',
+    name: 'Code Snippets',
+    component: Snippets,
     inSidebar: true
   }
 ]
