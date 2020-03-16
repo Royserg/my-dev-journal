@@ -8,7 +8,7 @@ path: "/node/markdown-to-html"
 
 example project structure:
 
-```
+```md
 server
 +-src
 --+-markdown
@@ -18,7 +18,7 @@ server
 ```
 
 content of first.md:
-```
+```md
 ---    <!-- This's a front matter -->
 date: "06.03.2020"
 title: "First post"
@@ -34,7 +34,7 @@ Want to share this function
 ```
 install package `npm i front-matter` to get front matter and the remaining content in easier format.
 
-```js
+```javascript
 // app.js
 const fs = require('fs')
 const fm = require('front-matter')
@@ -59,7 +59,7 @@ app.get('/', (req, res) => {
 
 This is the response when hitting `/api/first`, front matter data is placed into `attributes` and content into `body`.
 
-```
+```md
 {
   attributes: {date: "06.03.2020", title: "First post"}
   body: "## This is my heading↵↵And here is some content..."
@@ -68,7 +68,7 @@ This is the response when hitting `/api/first`, front matter data is placed into
 }
 ```
 ---
-On the client-side
+## On the client-side
 
 Use `showdown` package (cdn) that converts `.md` to `html`
 ```html

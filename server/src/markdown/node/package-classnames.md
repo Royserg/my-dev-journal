@@ -6,10 +6,10 @@ path: "/node/package-classnames"
 
 ## Conditional joining classNames together
 
-installation: `npm i classnames`
+### installation: `npm i classnames`
 
 usage (copied from documentation):
-```js
+```javascript
 classNames('foo', 'bar'); // => 'foo bar'
 classNames('foo', { bar: true }); // => 'foo bar'
 classNames({ 'foo-bar': true }); // => 'foo-bar'
@@ -19,7 +19,7 @@ classNames({ foo: true, bar: true }); // => 'foo bar'
 ```
 
 Simplified example from the project
-```js
+```javascript
 const isActive = routePath => {
   return location.pathname === routePath
 }

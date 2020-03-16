@@ -6,11 +6,10 @@ path: "/node/package-cross-env"
 
 ## Provides universal way of setting environmental variables, regardless of the OS.
 
-installation:
-   `npm i -D cross-env`
+### installation: `npm i -D cross-env`
 
 usage:
-```
+```json
   {
     "scripts": {
       "watch": "cross-env PORT=3001 nodemon app"
