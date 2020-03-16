@@ -6,6 +6,8 @@ import { getPost } from 'repositories/posts'
 import Page from 'components/Page/Page'
 import BackButton from 'components/Buttons/BackButton/BackButton'
 
+import CodeBlock from './CodeBlock'
+
 import styles from './postStyles'
 
 const useStyles = makeStyles(styles)
@@ -32,12 +34,13 @@ const Post = props => {
       <ReactMarkdown
         className={classes.markdown}
         source={postData.body}
+        renderers={{ code: CodeBlock }}
         escapeHtml={false}
       />
     </Page>
   ) : (
-    <Page pageTitle='Loading..' />
-  )
+      <Page pageTitle='Loading..' />
+    )
 
   return (
     <>

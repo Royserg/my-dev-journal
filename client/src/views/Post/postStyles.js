@@ -4,10 +4,13 @@ import { boxShadow, blackColor, whiteColor } from 'assets/jss/general'
 
 const postStyles = theme => ({
   markdown: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
     fontSize: '17px',
     color: blackColor[1],
     fontFamily: 'Roboto, Helvetica, Arial, sans-serif',
-    width: '55%',
+    width: '60%',
     '& code': {
       padding: '.1em',
       background: blackColor[1],
@@ -42,9 +45,15 @@ const postStyles = theme => ({
       marginBlockEnd: '1em',
       paddingInlineStart: '40px',
     },
+    '& hr': {
+      width: '90%',
+      height: '0.2em',
+      margin: '1em auto',
+      background: blackColor[1]
+    },
     '& pre': {
       fontFamily: 'source-code-pro, monospace, Courier New',
-      width: '95%',
+      width: '96%',
       marginLeft: '0.5em',
       marginBottom: '1em',
       borderRadius: '5px',
@@ -56,7 +65,8 @@ const postStyles = theme => ({
       '& code': {
         display: 'block',
         overflowX: 'auto',
-        padding: '1em',
+        margin: '0 auto',
+        // padding: '1em',
         background: '#fefefe',
         color: blackColor[1],
         fontSize: '1em',
