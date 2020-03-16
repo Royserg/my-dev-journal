@@ -10,7 +10,7 @@ a custom hook.
 
 Here, extracting fetching posts, because I repeat it for each category.
 
-```js
+```javascript
 // usePosts.js
 import { useState, useEffect } from 'react'
 import { getPosts } from 'repositories/posts'
@@ -41,7 +41,7 @@ export default usePosts
 ```
 
 And use it in your component like below:
-```js
+```jsx
 // Node.js
 import React from 'react'
 import usePosts from 'hooks/usePosts'

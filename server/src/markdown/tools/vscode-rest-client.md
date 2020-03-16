@@ -9,14 +9,14 @@ path: "/tools/vscode-rest-client"
 You can create a directory for queries that can be versioned and shared.
 
 GET request
-```
+```md
 // queries/getUsers.rest
 GET http://localhost:3001/api/users
 
 ```
 
 POST request
-```
+```md
 // queries/createUser.rest
 POST http://localhost:3001/api/users
 content-type: application/json

@@ -5,7 +5,7 @@ path: "/snippets/express-skeleton"
 ---
 
 
-```js
+```javascript
 const express = require('express')
 const app = express()
 

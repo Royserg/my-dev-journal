@@ -6,10 +6,10 @@ path: "/commands/npx"
 
 Downloads latest version of required package (if not specified), executes code and deletes the package after finished.
 ```
-npx <package_name> [arguments/commands]
+$ npx <package_name> [arguments/commands]
 ```
 
 Useful when using a package rarely, like:
 ```
-create-react-app
+$ create-react-app
 ```
