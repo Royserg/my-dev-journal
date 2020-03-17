@@ -5,7 +5,9 @@
   "main": "app.js",
   "scripts": {
     "start": "node app",
-    "watch": "cross-env PORT=3001 nodemon app"
+    "watch": "cross-env PORT=3001 nodemon app",
+    "deploy": "git push heroku master",
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && npm run deploy"
   },
   "author": "Jakub",
   "license": "ISC",
