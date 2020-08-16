@@ -1,5 +1,11 @@
 # my-dev-journal
-Journal application about what I've learnt
+Journal application documenting what I've learned during 4th semester of Computer Science.
+
+[Live Demo deployed to Heroku](https://dashboard.heroku.com/apps/my-dev-journal)
+
+---
+## To run locally:
+
 
 Before running the project, install dependencies. Run this command from root directory:
 
