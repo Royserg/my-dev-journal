@@ -1,7 +1,7 @@
 # my-dev-journal
 Journal application documenting what I've learned during 4th semester of Computer Science.
 
-[Live Demo deployed to Heroku](https://dashboard.heroku.com/apps/my-dev-journal)
+[Live Demo deployed to Heroku](https://my-dev-journal.herokuapp.com/node)
 
 ---
 ## To run locally:
